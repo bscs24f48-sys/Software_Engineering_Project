@@ -1,9 +1,16 @@
-Adlynk: Multi-Channel Advertising Management Platform
+
+## About Project
+Adlynk is a software engineering project developed as part of CSC-225 (Software Engineering) at Namal University, Mianwali. The project addresses disconnected and inefficient advertising workflows in Pakistan by providing a centralized digital platform for managing advertising campaigns across multiple channels.
+
+## Key problems:
 
 
 
-https://docs.google.com/spreadsheets/d/1czQSWoIMbhiGJrbsxJiYsBCTrp9PE0uaT6xD4J6GeGk/edit?usp=sharing
+####  Advertising deals are done manually, which makes the process slow and difficult.
 
+####  Business owners waste time and money managing ads.
 
-https://github.com/user-attachments/assets/eed0bda9-66f2-4971-b98e-096cbf1788ec
+#### Billboard and advertising service providers are hard to find.
+
+#### There is no one platform to manage all types of advertising.
 

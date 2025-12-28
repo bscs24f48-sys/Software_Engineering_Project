@@ -26,7 +26,7 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 #### Billboard and advertising service providers are hard to find.
 
 #### There is no one platform to manage all types of advertising.
-## Screenshots
+## Use case
 
-![![usecases](https://github.com/user-attachments/assets/3b9ddc8d-b9e4-4dd1-a85a-c34ad48b300f)
-]
+![usecases](https://github.com/user-attachments/assets/3b9ddc8d-b9e4-4dd1-a85a-c34ad48b300f)
+

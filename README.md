@@ -83,6 +83,10 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 # Payment Gateway
 ## Process Payment:
 . Handle payment transactions securely (included in "Make Payment")
+## Data FLow Diagram(0 Level)
+
+![usecases]![dfd](https://github.com/user-attachments/assets/b6579a58-f667-488c-bd5d-5849bf6f06e6)
+
 
 # Data Flow Description
 The Adlynk platform centralizes data exchange between four key stakeholders:

@@ -1,461 +1,831 @@
 \documentclass[12pt,a4paper]{article}
-
-% Packages
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{parskip}
 \usepackage{enumitem}
-\usepackage{tocloft}
-\usepackage{setspace}
-\usepackage{cite}
-\usepackage{xcolor}
-\renewcommand{\contentsname}{\color{black}Table of Contents}
+\usepackage{hyperref}
+\usepackage{graphicx}
 
-% Header and Footer
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{CSC-225 Software Engineering}
-\fancyhead[R]{Milestone 1}
-\fancyfoot[C]{\thepage}
 
-% Title formatting
-\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
-
-% Hyperlink setup
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    citecolor=blue,
-}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    linktoc=all
-}
-
-\onehalfspacing
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 \begin{document}
 
-% ========================
-% TITLE PAGE
-% ========================
 \begin{titlepage}
     \centering
     \vspace*{2cm}
     
-    {\Huge\bfseries "Multi-Channel Advertising Management Platform"\par}
-    {\Huge\bfseries Adlynk\par}
-    \vspace{1cm}
-    {\Large Software Engineering Project Proposal\par}
+    {\Huge\bfseries Software Requirements Specification\par}
     \vspace{0.5cm}
-    {\large CSC-225 – Software Engineering\par}
+    {\large for\par}
+    \vspace{0.5cm}
+    {\Huge\bfseries ADLynk Multi-Channel Advertising Management Platform\par}
+    \vspace{2cm}
+    {\Large Version 1.0\par}
     \vspace{2cm}
     
-    {\Large\textbf{Submitted By:}\par}
-    \vspace{0.5cm}
-    \begin{center}
-\begin{tabular}{llp{4cm}} % Two 'l' for left alignment, one 'p' for fixed width for details
-\textbf{Student Name 1} & \textbf{Bilal Ahmed Khan} \\  
-\textbf{Roll NO:} &  \textbf{NUM-BSCS-2024-21}\\
- \textbf{EMAIL:} &     \textbf{bscs24f21@namal.edu.pk}  \\[0.3cm] \\
- \textbf{Student Name 2} & \textbf{Muhammad Hamza} \\  
-\textbf{Roll NO:} &  \textbf{NUM-BSCS-2024-48}\\
- \textbf{EMAIL:} &     \textbf{bscs24f48@namal.edu.pk}  \\[0.3cm]
-
-
-
-\end{tabular}
-\end{center}
+    {\large Muhammad Hamza (NUM-BSCS-2024-48)\par}
+    {\large Bilal Ahmed Khan (NUM-BSCS-2024-21)\par}
+    \vspace{1cm}
     
-    \vfill
-    
-    {\large\textbf{Submission Date:} November 9, 2025\par}
-    \vspace{0.5cm}
     {\large Department of Computer Science\par}
     {\large Namal University, Mianwali\par}
+    \vspace{1cm}
     
+    {\large November 28, 2025\par}
 \end{titlepage}
-\newpage
+
 \tableofcontents
 \newpage
 
-% ========================
-% REQUIREMENT PROVIDER AGREEMENT
-% ========================
-\newpage
-\section{Parties Involved}
-
-\subsection*{Requirement Provider (RP):}
-\begin{itemize}
-    \item Name: Saqlain Baig
-    \item Role: Client/Requirement Provider
-    \item Contact: 03336308826
-    \item Email: saqlainbaig5@gmail.com
-\end{itemize}
-
-\subsection*{Development Team:}
-\textbf{Developer 1:}
-\begin{itemize}
-    \item Name: Muhammad Hamza
-    \item Roll No: NUM-BSCS-2024-48
-    \item Email: bscs24f48@namal.edu.pk
-\end{itemize}
-
-\textbf{Developer 2:}
-\begin{itemize}
-    \item Name: Bilal Ahmed Khan
-    \item Roll No: NUM-BSCS-2024-21
-    \item Email: bscs24f21@namal.edu.pk
-\end{itemize}
-
-\noindent\textbf{Academic Institution:} Namal University, Mianwali
-
-\noindent\textbf{Course:} CSC-225 -- Software Engineering
-
-\section{Purpose of Agreement}
-
-This agreement establishes the terms and understanding between the Requirement Provider (RP) and the development team regarding the software engineering project titled ``Multi-Channel Advertising Management Platform.'' The RP agrees to provide necessary requirements, feedback, and guidance throughout the project lifecycle.
-
-\section{Project Overview}
-
-The project aims to develop a Multi-Channel Advertising Management Platform that centralizes advertising services including billboards, vehicle branding, and social media marketing into a single digital platform. The system will enable business owners to easily find, book, and manage advertising campaigns while connecting them with professional advertisers, billboard owners, and social media influencers.
-
-\section{Responsibilities of the Requirement Provider}
-
-The Requirement Provider, Saqlain Baig, agrees to:
-
-\begin{enumerate}
-    \item \textbf{Provide Clear Requirements:} Share detailed information about the desired features, functionality, and objectives of the platform.
-    
-    \item \textbf{Availability for Communication:} Be available for regular meetings (weekly or bi-weekly) to discuss project progress, provide feedback, and clarify requirements.
-    
-    \item \textbf{Timely Feedback:} Review deliverables and prototypes within an agreed timeframe (typically 3-5 business days) and provide constructive feedback.
-    
-    \item \textbf{Domain Expertise:} Share industry knowledge about advertising management, business workflows, and user needs to ensure the platform meets real-world requirements.
-    
-    \item \textbf{Testing and Validation:} Participate in user acceptance testing (UAT) and validate that the developed features meet the specified requirements.
-    
-    \item \textbf{Access to Resources:} Provide any necessary resources, sample data, or access to relevant stakeholders that may help in understanding the requirements better.
-\end{enumerate}
-
-\section{Responsibilities of the Development Team}
-
-The development team (Muhammad Hamza and Bilal Ahmed Khan) agrees to:
-
-\begin{enumerate}
-    \item \textbf{Requirement Analysis:} Conduct thorough analysis of the requirements provided by the RP and document them clearly.
-    
-    \item \textbf{Regular Updates:} Provide regular progress updates through meetings, demos, and milestone reports.
-    
-    \item \textbf{Quality Deliverables:} Develop the platform following software engineering best practices and deliver functional, tested features.
-    
-    \item \textbf{Documentation:} Maintain comprehensive documentation including requirement specifications, design documents, and user manuals.
-    
-    \item \textbf{Iterative Development:} Follow Agile methodology allowing for feedback and adjustments.
-    
-    \item \textbf{Problem Solving:} Address technical challenges and seek clarification from the RP when requirements are unclear or need modification.
-\end{enumerate}
-
-\section{Project Timeline and Milestones}
-
-The project will be completed in phases over the course of the semester:
-
-\begin{itemize}
-    \item \textbf{Milestone 1:} Requirement gathering and project proposal (November 2025)
-    \item \textbf{Milestone 2:} System design and architecture (December 2025)
-    \item \textbf{Milestone 3:} Development and implementation (January-February 2026)
-    \item \textbf{Milestone 4:} Testing and deployment (March 2026)
-    \item \textbf{Final Presentation:} End of semester
-\end{itemize}
-
-\noindent\textit{Note: Specific dates will be confirmed in project planning meetings.}
-
-\section{Communication Protocol}
-
-\begin{enumerate}
-    \item \textbf{Meeting Schedule:} Weekly/bi-weekly meetings (to be scheduled mutually)
-    \item \textbf{Communication Channels:}
-    \begin{itemize}
-        \item Email for formal communication
-        \item WhatsApp/Phone for quick queries
-        \item Video calls (Zoom/Google Meet) for detailed discussions
-    \end{itemize}
-    \item \textbf{Response Time:} Both parties agree to respond to queries within 48 hours
-\end{enumerate}
-
-\section{Scope and Limitations}
-
-\begin{enumerate}
-    \item This is an academic project developed as part of the Software Engineering course (CSC-225).
-    \item The final deliverable will be a working prototype/minimum viable product (MVP) demonstrating core functionalities.
-    \item Advanced features requiring extensive resources or third-party integrations may be documented as future enhancements.
-    \item The project timeline and scope are subject to academic constraints and course requirements.
-\end{enumerate}
-
-\section{Intellectual Property and Confidentiality}
-
-\begin{enumerate}
-    \item All project requirements, business information, and data shared by the RP will be kept confidential and used solely for this academic project.
-    \item The developed software and documentation will be owned by the development team for academic purposes, with the RP having rights to use the concept and requirements for future development.
-    \item Both parties agree not to share sensitive project information with unauthorized third parties.
-\end{enumerate}
-
-\section{Modification of Requirements}
-
-\begin{enumerate}
-    \item Any changes to the project requirements must be discussed and mutually agreed upon by both parties.
-    \item Major changes in scope may require timeline adjustments and will be documented through change request forms.
-    \item The development team reserves the right to assess the feasibility of requested changes and provide alternative solutions if necessary.
-\end{enumerate}
-
-\section{Academic Compliance}
-
-This project is conducted as part of academic coursework at Namal University. Both parties acknowledge that:
-
-\begin{enumerate}
-    \item The project must meet academic standards and course requirements.
-    \item The supervising faculty has the authority to provide guidance and make decisions regarding project scope and direction.
-    \item All work must adhere to academic integrity policies.
-\end{enumerate}
-
-\section{Dispute Resolution}
-
-In case of any disagreements or conflicts:
-
-\begin{enumerate}
-    \item Issues will first be discussed directly between the RP and development team.
-    \item If unresolved, the course instructor will be consulted for mediation.
-    \item Both parties agree to work collaboratively and professionally to resolve disputes.
-\end{enumerate}
-
-\section{Agreement Termination}
-
-This agreement remains valid for the duration of the academic semester. Either party may request termination with valid reasons, subject to approval by the course instructor.
-
-\section{Signatures}
-
-By signing below, both parties acknowledge that they have read, understood, and agree to the terms outlined in this Requirement Provider Agreement.
-
-\vspace{1cm}
-
-\noindent\textbf{Requirement Provider:}
-
-\noindent\textbf{Name:} Saqlain Baig
-
-\noindent\textbf{Signature:} \underline{\hspace{6cm}}
-
-\noindent\textbf{Date:} \underline{\hspace{6cm}}
-
-\vspace{1cm}
-
-\noindent\textbf{Development Team Member 1:}
-
-\noindent\textbf{Name:} Muhammad Hamza
-
-\noindent\textbf{Signature:} \underline{\hspace{6cm}}
-
-\noindent\textbf{Date:} \underline{\hspace{6cm}}
-
-\vspace{1cm}
-
-\noindent\textbf{Development Team Member 2:}
-
-\noindent\textbf{Name:} Bilal Ahmed Khan
-
-\noindent\textbf{Signature:} \underline{\hspace{6cm}}
-
-\noindent\textbf{Date:} \underline{\hspace{6cm}}
-
-\vspace{1cm}
-
-\noindent\textbf{Course Instructor (Witness):}
-
-\noindent\textbf{Name:} \underline{\hspace{6cm}}
-
-\noindent\textbf{Signature:} \underline{\hspace{6cm}}
-
-\noindent\textbf{Date:} \underline{\hspace{6cm}}
-
-\section{Appendices}
-
-\noindent\textbf{Appendix A:} Contact Information Summary
-
-\noindent\textbf{Appendix B:} Project Milestone Schedule (to be attached)
-
-\noindent\textbf{Appendix C:} Requirement Change Request Form (if applicable)
-
-
-% ========================
-% REQUIREMENT PROVIDER AGREEMENT
-% ========================
-
-\vspace{1cm}
-
-
-
-
-\vspace{1cm}
 \section{Introduction}
-Advertising is a crucial part of every business, but managing campaigns across multiple platforms can be complex and time-consuming. Our \textbf{Multi-Channel Advertising Management Platform} provides a \textbf{digital solution} that brings all advertising options together in one place — from \textbf{online promotions and social media marketing} to \textbf{traditional methods like billboards and vehicle branding}.
 
-Business owners no longer need to contact multiple agencies or negotiate separate deals. Through our platform, they can easily find and book advertising services digitally, as well as reserve billboard spaces in different cities across Pakistan — all from a single, convenient dashboard.
+Advertising is a crucial part of every business, but managing campaigns across multiple platforms can be complex and time-consuming. Our Multi-Channel Advertising Management Platform provides a digital solution that brings all advertising options together in one place --- from online promotions and social media marketing to traditional methods like billboards and vehicle branding.
 
-This solution operates under \textbf{ADLynk}, which leverages digital innovation to make advertising easier and more effective. It makes professional advertising accessible to everyone — not just large corporations and retailers, but also \textbf{small businesses, startups, and online store owners} — enabling them to run complete marketing campaigns with transparent pricing, simplified booking, and clear performance tracking.
+Business owners no longer need to contact multiple agencies or negotiate separate deals. Through our platform, they can easily find and book advertising services digitally, as well as reserve billboard spaces in different cities across Pakistan --- all from a single, convenient dashboard.
 
-By centralizing the entire advertising process, our platform saves time, reduces costs, and improves coordination across all marketing channels, while also helping \textbf{advertisers, billboard owners, and influencers} connect with more clients efficiently.
+This solution operates under ADLynk, which leverages digital innovation to make advertising easier and more effective. It makes professional advertising accessible to everyone --- not just large corporations and retailers, but also small businesses, startups, and online store owners --- enabling them to run complete marketing campaigns with transparent pricing, simplified booking, and clear performance tracking.
 
+By centralizing the entire advertising process, our platform saves time, reduces costs, and improves coordination across all marketing channels, while also helping advertisers, billboard owners, and influencers connect with more clients efficiently.
 
-% ========================
-% PROBLEM STATEMENT
-% ========================
-\section{Problem Statement}
+\subsection{Purpose}
 
-In today’s competitive market, businesses rely on multiple advertising channels to reach their target audience — including billboards, vehicle branding, and social media platforms. However, managing these campaigns across different platforms is \textbf{complicated, time-consuming, and inefficient}.
+This Software Requirements Specification (SRS) document provides a complete description of the functional and non-functional requirements for the ADLynk Multi-Channel Advertising Management Platform. This document is intended for the development team, project stakeholders, requirement provider, and academic supervisors. It serves as the foundation for the design, implementation, testing, and validation phases of the project.
 
-Currently, \textbf{business owners must contact multiple agencies} and \textbf{negotiate separate deals}, which leads to \textbf{increased costs, inconsistent messaging, and poor time management}. \textbf{Small businesses, startups, and online store owners} often struggle even more due to limited resources and lack of access to professional advertisers and advertising networks.
+The primary purpose of this SRS is to:
 
-There is \textbf{no unified digital system in Pakistan} that connects business owners with \textbf{professional advertisers, billboard owners, vehicle advertisers, and social media influencers} under one platform. As a result, both \textbf{business owners and service providers} face challenges — business owners find it hard to plan and manage multi-channel campaigns effectively, while service providers miss potential clients due to limited visibility.
-
- 
-
-\textbf{Current Problem:}
-
-In the current advertising landscape, \textbf{business owners in Pakistan face major challenges} when trying to promote their brands across different platforms. To run a complete marketing campaign, they have to \textbf{individually contact billboard owners, vehicle advertisers, and digital marketing agencies or social media influencers}, which makes the entire process \textbf{scattered, slow, and inefficient}.
-
-Most \textbf{traditional advertising methods} still rely on manual coordination, personal visits, and offline negotiations. On the other hand, \textbf{digital advertising} through social media platforms often lacks transparency in pricing, performance tracking, and trust between business owners and advertisers.
-
-Because there is \textbf{no centralized digital system} that brings all these services together, business owners spend extra \textbf{time, effort, and money} managing different campaigns separately. As a result, they struggle to maintain \textbf{consistent branding}, measure \textbf{marketing effectiveness}, and make \textbf{data-driven decisions}.
-
-This fragmented approach prevents small and medium-sized businesses from running effective, multi-channel campaigns, while advertisers and service providers also lose potential clients due to lack of visibility and accessibility.
-
-
-\textbf{Who is Affected:}
-
-The challenges in the current advertising system affect multiple stakeholders within the marketing ecosystem: 
-    \begin{itemize}
-        \item \textbf{Business Owners:} Especially small businesses, startups, and online store owners who lack the resources or connections to manage multiple advertising channels. They struggle to find reliable advertisers, compare prices, and coordinate campaigns efficiently.
-    \end{itemize}
-    \begin{itemize}
-        \item \textbf{Advertisers, Influencers and Marketing Agencies:} Many professional advertisers, Influencers and digital marketers lose potential clients because there is no centralized platform where businesses can easily discover and connect with them.
-    \end{itemize}
-
-               
 \begin{itemize}
-    \item \textbf{Billboard and Vehicle Advertising Providers:}Owners of billboard spaces and advertising vehicles face difficulties in reaching potential customers and managing bookings due to the absence of a unified digital system.
+    \item Define all functional requirements of the ADLynk platform
+    \item Specify non-functional requirements including performance, security, and usability
+    \item Establish a clear understanding between the development team and the requirement provider
+    \item Provide a reference for testing and validation activities
+    \item Serve as a contractual basis for the academic project deliverables
 \end{itemize}
-             
-            
-\textbf{Consequences of Not Solving:} 
 
-If current problems in the advertising industry remain unaddressed, several negative consequences will continue to affect businesses, advertisers, and the overall marketing ecosystem.
+\subsection{Scope}
+
+The ADLynk Multi-Channel Advertising Management Platform is a mobile application designed to centralize and streamline advertising services across multiple channels including billboards, vehicle branding, and social media marketing. The system will serve as a digital marketplace connecting business owners with professional advertisers, billboard owners, vehicle advertisers, and social media influencers.
+
+\subsubsection{Product Name}
+
+ADLynk - Multi-Channel Advertising Management Platform
+
+\subsubsection{Benefits and Goals}
+
+The system will provide the following benefits:
+
+\begin{itemize}
+    \item Centralized platform for managing multiple advertising channels
+    \item Simplified booking process for billboard spaces and advertising services
+    \item Transparent pricing and performance tracking
+    \item Increased accessibility for small businesses and startups
+    \item Enhanced visibility for service providers and advertisers
+    \item Reduced time and cost in managing advertising campaigns
+    \item Digital transformation of traditional advertising methods
+\end{itemize}
+
+\subsubsection{Product Objectives}
+
+\begin{itemize}
+    \item Provide a unified digital platform for all advertising services
+    \item Enable business owners to discover, compare, and book advertising services
+    \item Connect advertisers, billboard owners, and influencers with potential clients
+    \item Facilitate campaign management and performance tracking
+    \item Implement secure payment processing and booking systems
+    \item Support scalability for nationwide expansion across Pakistan
+\end{itemize}
+
+\subsection{Definitions, Acronyms, and Abbreviations}
+
+\begin{itemize}
+    \item \textbf{ADLynk:} The Multi-Channel Advertising Management Platform
+    \item \textbf{API:} Application Programming Interface
+    \item \textbf{SRS:} Software Requirements Specification
+    \item \textbf{RP:} Requirement Provider
+    \item \textbf{UI:} User Interface
+    \item \textbf{UX:} User Experience
+    \item \textbf{UAT:} User Acceptance Testing
+    \item \textbf{MVP:} Minimum Viable Product
+    \item \textbf{NFR:} Non-Functional Requirement
+    \item \textbf{Business Owner:} Individual or organization seeking advertising services
+    \item \textbf{Service Provider:} Advertisers, billboard owners, vehicle advertisers, or influencers offering services
+    \item \textbf{Campaign:} A coordinated advertising effort across one or more channels
+    \item \textbf{Billboard Space:} Physical advertising location available for booking
+    \item \textbf{Vehicle Branding:} Advertisement on vehicles including cars, buses, and rickshaws
+    \item \textbf{Influencer:} Social media content creator who promotes brands
+    \item \textbf{Booking:} Reservation of advertising service or space
+    \item \textbf{Administrator:} Platform manager with system-wide privileges
+\end{itemize}
+
+\subsection{References}
 
 \begin{enumerate}
-\textbf{    \item Wasted Time and Resources:}
-Business owners will keep spending excessive time searching for reliable advertisers, waiting for responses, and dealing with the inconvenience of coordinating with several agencies separately.
-\textbf{\item Higher Advertising Costs:Limited Access for Small Businesses:}
-Without a centralized system, businesses will continue to face inconsistent pricing, hidden charges, and unstandardized rates, increasing overall marketing expenses.
-\textbf{\item Limited Access for Small Businesses:}
-Startups and small business owners will remain at a disadvantage, as they lack the resources to connect with professional advertisers, Influencers and plan multi-channel campaigns. Many small businesses lose money by investing in expensive influencers and inexperienced marketers, yet fail to achieve meaningful sales. As a result, they often run out of funds when their business actually needs financial support for real growth. 
-\textbf{\item Missed Growth Opportunities for Service Providers:}
-Billboard owners, Advertisers and influencers will keep losing potential clients due to limited visibility and lack of digital presence.
+    \item IEEE Std 830-1984, IEEE Guide to Software Requirements Specifications
+    \item Project Proposal: Multi-Channel Advertising Management Platform, November 2025
+    \item Requirement Provider Agreement between Saqlain Baig and Development Team
+    \item CSC-225 Software Engineering Course Materials, Namal University
+    \item Agile Software Development Principles and Scrum Framework
+    \item Flutter Documentation: \url{https://flutter.dev/docs}
+    \item Firebase Documentation: \url{https://firebase.google.com/docs}
 \end{enumerate}
-\textbf{Inadequacy of Existing Solutions:}
 
-Currently, businesses in Pakistan rely on a fragmented approach to advertising, using multiple agencies, and platforms to reach their target audience. Existing solutions have several limitations: 
-\begin{enumerate}
-\textbf{    \item Fragmented Platforms:}
-There is no single platform that integrates digital advertising, social media influencers, billboards, and vehicle advertising. Businesses must contact multiple agencies individually, which is inefficient and time-consuming. 
-\textbf{\item Lack of Transparency:}
-Pricing, availability, and performance metrics are often unclear or inconsistent across different service providers, making it difficult for business owners to make informed decisions. 
-\textbf{\item Limited Access for Small Businesses:}
-Most advertising solutions cater primarily to large corporations. Small businesses, startups, and online stores often cannot access professional advertisers or billboard networks easily.
-\textbf{\item \textbf{Manual Coordination and Delays} :}
-Business owners must wait for responses from multiple agencies or service providers, resulting in slow campaign execution and poor coordination between different advertising channels. 
+\subsection{Overview}
 
-\end{enumerate}
-% ========================
-% PROJECT OBJECTIVES
-% ========================
-\section{Project Objectives}
-
-The main objectives of the project are to address the challenges faced by business owners and service providers in the advertising industry and provide a unified, efficient, and digital solution. Specifically, the objectives are: 
-\textbf{    \item Centralize Advertising Services:}
-To provide a single platform where business owners can access and manage multiple advertising channels, including \textbf{billboards, vehicle branding, and social media marketing}.
-\item \textbf{Simplify Booking and Coordination:}
-To reduce the time and effort business owners spend searching for advertisers, waiting for responses, and negotiating separate deals. 
-\item \textbf{Increase Accessibility for Small Businesses and Startups:}
-To enable small businesses, startups, and e-commerce brands to run professional marketing campaigns with transparent pricing and easy access to professional advertisers. 
-\item \textbf{Enhance Visibility for Service Providers:}
-To help billboard owners, vehicle advertisers, and social media influencers reach more clients and grow their business through a centralized digital platform. 
-\item \textbf{Promote Digital Transformation in Advertising:}
-To modernize the advertising industry in Pakistan by integrating traditional and digital advertising methods into one efficient system. 
-\textbf{
-\section{Stakeholder Identification}
-} 
-The success of the Multi-Channel Advertising Management Platform depends on understanding and addressing the needs of all stakeholders involved in the advertising ecosystem. The key stakeholders are: 
-\begin{itemize}
-    \item \textbf{Business Owners:}
-Small businesses, startups, e-commerce brands, and large corporations who want to promote their products or services across multiple channels efficiently.
-\item \textbf{Professional Advertisers and Marketing Agencies:}
-Digital marketing experts and agencies who provide social media marketing, online promotions, and campaign management services. 
-\item \textbf{Billboard Owners:}
-Individuals or companies owning billboard spaces who want to maximize occupancy and revenue by reaching more clients.
-\item \textbf{Social Media Influencers:}
-Individuals or content creators who collaborate with businesses for digital promotions and brand campaigns. 
-\item \textbf{Platform Administrators/Developers:}
-The team responsible for maintaining the platform, ensuring smooth functionality, security, and continuous improvements. 
-\end{itemize}
-% ========================
-% SOFTWARE DEVELOPMENT METHODOLOGY
-% ========================
-\section{Software Development Methodology}
-
-The development of the \textbf{Multi-Channel Advertising Management Platform} will follow the \textbf{Agile methodology}, specifically using the \textbf{Scrum framework}. Agile is chosen because it allows \textbf{iterative development, flexibility, and continuous stakeholder feedback}, which are essential for building a platform that meets the dynamic needs of business owners and advertisers. 
-% ========================
-% TOOLS AND TECHNOLOGIES
-% ========================
-\section{Tools and Technologies}
-
-The development of the \textbf{ADLynk} will use a combination of design, development, and backend tools to ensure a \textbf{user-friendly, scalable, and efficient mobile application}.
-
-\paragraph{\textbf{1. UI/UX Design}}
+The remainder of this document is organized as follows:
 
 \begin{itemize}
-    \item \textbf{Adobe XD} – For designing interactive and user-friendly app interfaces, wireframes, and prototypes.
-
+    \item \textbf{Section 2 - Overall Description:} Provides context for the system including product perspective, functions, user characteristics, constraints, assumptions, and dependencies.
+    \item \textbf{Section 3 - Specific Requirements:} Details all functional requirements, external interface requirements, and non-functional requirements.
+    \item \textbf{Appendices:} Include Context Diagram, Use Case Diagram, and additional reference materials.
 \end{itemize}
 
-\paragraph{\textbf{2. Mobile App Development}}
+\section{Overall Description}
+
+\subsection{Product Perspective}
+
+ADLynk is a new, self-contained mobile application that operates as an independent digital marketplace for advertising services in Pakistan. The system does not replace existing advertising methods but rather integrates them into a unified platform.
+
+\subsubsection{System Interfaces}
+
+The system will interface with:
 
 \begin{itemize}
-    \item \textbf{Flutter / React Native} – Cross-platform frameworks for building mobile applications compatible with \textbf{Android and iOS}.
-    \item \textbf{Dart / JavaScript} – Programming languages used with Flutter or React Native for app development.
+    \item Mobile operating systems (Android and iOS)
+    \item Backend server infrastructure
+    \item Firebase Realtime Database/Firestore for data storage
+    \item Payment gateway APIs for transaction processing
+    \item Notification services for push notifications
+    \item Map services for location-based features
 \end{itemize}
 
-\paragraph{\textbf{3. Back-End Development}}
+\subsubsection{User Interfaces}
+
+The mobile application will provide intuitive user interfaces for:
 
 \begin{itemize}
-    \item \textbf{Node.js / Python (Django / Flask)} – To manage server-side operations, handle business logic, and process requests from the app.
-    \item \textbf{RESTful APIs} – To connect the mobile app with the backend and database services.
+    \item Registration and authentication
+    \item Service discovery and browsing
+    \item Campaign creation and management
+    \item Booking and reservation
+    \item Payment processing
+    \item Profile management
+    \item Communication between users
+    \item Performance analytics and reporting
 \end{itemize}
 
-\paragraph{\textbf{4. Database Management}}
+\subsubsection{Hardware Interfaces}
+
+\begin{itemize}
+    \item Smartphone devices (Android 8.0+ and iOS 12.0+)
+    \item Camera for photo uploads
+    \item GPS for location services
+    \item Network connectivity (WiFi/Mobile Data)
+\end{itemize}
+
+\subsubsection{Software Interfaces}
+
+\begin{itemize}
+    \item Operating Systems: Android and iOS
+    \item Backend: Node.js or Python (Django/Flask)
+    \item Database: Firebase Realtime Database/Firestore
+    \item Development Framework: Flutter or React Native
+    \item RESTful APIs for client-server communication
+\end{itemize}
+
+\subsubsection{Communications Interfaces}
+
+\begin{itemize}
+    \item HTTPS protocol for secure data transmission
+    \item RESTful API communication
+    \item Real-time data synchronization
+    \item Push notification protocols
+    \item Email and SMS for notifications
+\end{itemize}
+
+\subsubsection{Memory Constraints}
+
+\begin{itemize}
+    \item Mobile app size: Maximum 100 MB
+    \item Local cache storage: Up to 200 MB
+    \item Image uploads: Maximum 5 MB per image
+    \item Database storage: Scalable cloud storage
+\end{itemize}
+
+\subsubsection{Operations}
+
+The system will support the following operational modes:
+
+\begin{itemize}
+    \item Online mode: Full functionality with internet connection
+    \item Offline mode: Limited functionality for viewing cached data
+    \item Background mode: Notifications and data synchronization
+\end{itemize}
+
+\subsection{Product Functions}
+
+The major functions of ADLynk include:
+
+\subsubsection{User Management}
+
+\begin{itemize}
+    \item User registration and authentication
+    \item Profile creation and management
+    \item Role-based access control (Business Owners, Service Providers, Administrators)
+    \item Account verification and security management
+\end{itemize}
+
+\subsubsection{Service Discovery}
+
+\begin{itemize}
+    \item Browse available advertising services
+    \item Search and filter by location, type, and price
+    \item View detailed service provider profiles
+    \item Compare service options
+\end{itemize}
+
+\subsubsection{Billboard Management}
+
+\begin{itemize}
+    \item List available billboard spaces
+    \item View billboard locations on map
+    \item Check availability and pricing
+    \item Book billboard spaces
+\end{itemize}
+
+\subsubsection{Campaign Management}
+
+\begin{itemize}
+    \item Create multi-channel advertising campaigns
+    \item Schedule campaign duration
+    \item Manage campaign budgets
+    \item Track campaign performance
+\end{itemize}
+
+\subsubsection{Booking and Reservation}
+
+\begin{itemize}
+    \item Reserve advertising services
+    \item Process booking requests
+    \item Manage booking confirmations
+    \item Handle cancellations and modifications
+\end{itemize}
+
+\subsubsection{Payment Processing}
+
+\begin{itemize}
+    \item Secure payment transactions
+    \item Multiple payment method support
+    \item Transaction history
+    \item Invoice generation
+\end{itemize}
+
+\subsubsection{Communication}
+
+\begin{itemize}
+    \item In-app messaging between users
+    \item Notifications for bookings and updates
+    \item Support ticket system
+\end{itemize}
+
+\subsubsection{Analytics and Reporting}
+
+\begin{itemize}
+    \item Campaign performance metrics
+    \item Revenue tracking for service providers
+    \item User engagement analytics
+    \item Generate reports
+\end{itemize}
+
+\subsection{User Characteristics}
+
+\subsubsection{Business Owners}
+
+\begin{itemize}
+    \item \textbf{Technical Expertise:} Basic to intermediate smartphone usage skills
+    \item \textbf{Education Level:} High school to university level
+    \item \textbf{Experience:} May have limited experience with digital advertising platforms
+    \item \textbf{Primary Goals:} Find affordable advertising services, manage campaigns efficiently, track ROI
+    \item \textbf{User Base:} Small business owners, startups, e-commerce brands, large corporations
+\end{itemize}
+
+\subsubsection{Service Providers (Advertisers, Billboard Owners, Influencers)}
+
+\begin{itemize}
+    \item \textbf{Technical Expertise:} Intermediate smartphone and business management skills
+    \item \textbf{Education Level:} High school to university level
+    \item \textbf{Experience:} Professional experience in advertising or marketing
+    \item \textbf{Primary Goals:} Increase client base, manage bookings, maximize revenue
+    \item \textbf{User Base:} Digital marketing agencies, billboard owners, vehicle advertisers, social media influencers
+\end{itemize}
+
+\subsubsection{System Administrators}
+
+\begin{itemize}
+    \item \textbf{Technical Expertise:} Advanced technical and system management skills
+    \item \textbf{Education Level:} University degree in Computer Science or related field
+    \item \textbf{Experience:} System administration and platform management
+    \item \textbf{Primary Goals:} Maintain platform stability, monitor activities, resolve disputes
+\end{itemize}
+
+\subsection{Constraints}
+
+\subsubsection{Regulatory Constraints}
+
+\begin{itemize}
+    \item Must comply with Pakistan's data protection and privacy laws
+    \item Must adhere to advertising standards and regulations
+    \item Must comply with mobile app store policies (Google Play, Apple App Store)
+\end{itemize}
+
+\subsubsection{Hardware Limitations}
+
+\begin{itemize}
+    \item Must function on devices with limited storage and processing power
+    \item Must support various screen sizes and resolutions
+    \item Requires stable internet connection for full functionality
+\end{itemize}
+
+\subsubsection{Interface Constraints}
+
+\begin{itemize}
+    \item Must maintain consistent UI/UX across Android and iOS platforms
+    \item Must support Urdu and English languages
+    \item Must be accessible to users with basic technical literacy
+\end{itemize}
+
+\subsubsection{Development Constraints}
+
+\begin{itemize}
+    \item Academic project timeline (November 2025 - March 2026)
+    \item Limited development team (2 developers)
+    \item Academic resource constraints
+    \item Must deliver MVP within semester timeframe
+\end{itemize}
+
+\subsubsection{Technical Constraints}
+
+\begin{itemize}
+    \item Cross-platform compatibility requirement (Android and iOS)
+    \item Must use approved technology stack (Flutter/React Native, Firebase)
+    \item Limited third-party API integrations due to cost constraints
+\end{itemize}
+
+\subsection{Assumptions and Dependencies}
+
+\subsubsection{Assumptions}
+
+\begin{itemize}
+    \item Users have access to smartphones with Android 8.0+ or iOS 12.0+
+    \item Users have basic smartphone operation skills
+    \item Internet connectivity is available to users
+    \item Service providers will maintain accurate and updated information
+    \item Payment gateway services will remain operational
+    \item Firebase services will continue to be available and affordable
+    \item Billboard owners and advertisers are willing to adopt digital platform
+    \item Business owners will trust online booking system
+    \item The requirement provider will be available for regular feedback
+\end{itemize}
+
+\subsubsection{Dependencies}
+
+\begin{itemize}
+    \item Availability of Firebase backend services
+    \item Third-party payment gateway APIs
+    \item Map service APIs for location features
+    \item Notification service availability
+    \item Mobile app store approval processes
+    \item Internet service provider reliability
+    \item Timely feedback from requirement provider (Saqlain Baig)
+    \item Academic calendar and milestone deadlines
+    \item Access to development tools and licenses
+\end{itemize}
+\section{Specific Requirements}  
+\subsection{External Interface Requirements}
+
+\subsubsection{User Interfaces}
+
+The mobile application shall provide intuitive user interfaces for:
+
+\textbf{UI-1:} Registration and authentication screens with form validation
+
+\textbf{UI-2:} Home dashboard showing:
+\begin{itemize}
+    \item Quick access to main features
+    \item Recent activity notifications
+    \item Campaign status overview
+\end{itemize}
+
+\textbf{UI-3:} Service discovery interface with:
+\begin{itemize}
+    \item Search bar with auto-complete
+    \item Filter options (location, price, type, rating)
+    \item Grid/list view of services
+    \item Service detail pages
+\end{itemize}
+
+\textbf{UI-4:} Campaign management dashboard displaying:
+\begin{itemize}
+    \item Active, upcoming, and completed campaigns
+    \item Campaign performance metrics
+    \item Budget tracking
+\end{itemize}
+
+\textbf{UI-5:} Booking interface with:
+\begin{itemize}
+    \item Date/time selection
+    \item Service customization options
+    \item Pricing breakdown
+    \item Confirmation screens
+\end{itemize}
+
+\textbf{UI-6:} Payment processing interface with:
+\begin{itemize}
+    \item Payment method selection
+    \item Secure payment forms
+    \item Transaction receipts
+\end{itemize}
+
+\textbf{UI-7:} Profile management screens for updating user information
+
+\textbf{UI-8:} Communication interface with:
+\begin{itemize}
+    \item Chat message list
+    \item Individual conversation threads
+    \item Notification indicators
+\end{itemize}
+
+\textbf{UI-9:} Analytics and reporting interface with:
+\begin{itemize}
+    \item Visual charts and graphs
+    \item Performance metrics
+    \item Export options
+\end{itemize}
+
+\subsubsection{Hardware Interfaces}
+
+\textbf{HW-1:} The system shall interface with smartphone cameras to:
+\begin{itemize}
+    \item Capture photos for service listings
+    \item Upload campaign creative materials
+    \item Take profile pictures
+\end{itemize}
+
+\textbf{HW-2:} The system shall interface with GPS hardware to:
+\begin{itemize}
+    \item Determine user location
+    \item Display nearby billboard locations
+    \item Provide location-based service recommendations
+\end{itemize}
+
+\textbf{HW-3:} The system shall utilize device storage to:
+\begin{itemize}
+    \item Cache frequently accessed data
+    \item Store user session information
+    \item Save downloaded reports and invoices
+\end{itemize}
+
+\textbf{HW-4:} The system shall require network connectivity (WiFi or mobile data) for:
+\begin{itemize}
+    \item Real-time data synchronization
+    \item API communication
+    \item Push notification delivery
+\end{itemize}
+
+\subsubsection{Software Interfaces}
+
+\textbf{SW-1:} Operating System Interfaces
+\begin{itemize}
+    \item Android 8.0 (API Level 26) and above
+    \item iOS 12.0 and above
+\end{itemize}
+
+\textbf{SW-2:} Backend Server Interface
+\begin{itemize}
+    \item Technology: Node.js or Python (Django/Flask)
+    \item Communication: RESTful API over HTTPS
+    \item Data Format: JSON
+\end{itemize}
+
+\textbf{SW-3:} Database Interface
+\begin{itemize}
+    \item System: Firebase Realtime Database or Firestore
+    \item Purpose: Store user data, bookings, campaigns, and transactions
+    \item Access: Through Firebase SDK
+\end{itemize}
+
+\textbf{SW-4:} Payment Gateway Interface
+\begin{itemize}
+    \item Integration with third-party payment processors
+    \item Support for credit/debit cards and mobile wallets
+    \item Secure transaction processing
+    \item API-based communication
+\end{itemize}
+
+\textbf{SW-5:} Map Service Interface
+\begin{itemize}
+    \item Integration with Google Maps API or equivalent
+    \item Display billboard locations
+    \item Provide directions and navigation
+\end{itemize}
+
+\textbf{SW-6:} Notification Service Interface
+\begin{itemize}
+    \item Firebase Cloud Messaging (FCM) for push notifications
+    \item Email service API for email notifications
+    \item SMS gateway API for text notifications
+\end{itemize}
+
+\textbf{SW-7:} Authentication Service Interface
+\begin{itemize}
+    \item Firebase Authentication
+    \item Support for email/password and social login
+\end{itemize}
+
+\subsubsection{Communications Interfaces}
+
+\textbf{COM-1:} Network Protocol
+\begin{itemize}
+    \item HTTPS protocol for all client-server communication
+    \item TLS 1.2 or higher for encryption
+\end{itemize}
+
+\textbf{COM-2:} API Communication
+\begin{itemize}
+    \item RESTful API architecture
+    \item JSON data format
+    \item Standard HTTP methods (GET, POST, PUT, DELETE)
+\end{itemize}
+
+\textbf{COM-3:} Real-time Data Synchronization
+\begin{itemize}
+    \item WebSocket connections for real-time updates
+    \item Firebase Realtime Database listeners
+\end{itemize}
+
+\textbf{COM-4:} Push Notifications
+\begin{itemize}
+    \item Firebase Cloud Messaging (FCM) protocol
+    \item Platform-specific notification delivery (APNs for iOS)
+\end{itemize}
+
+\textbf{COM-5:} Email Communication
+\begin{itemize}
+    \item SMTP protocol for sending emails
+    \item Support for HTML formatted emails
+\end{itemize}
+
+\textbf{COM-6:} SMS Communication
+\begin{itemize}
+    \item SMS gateway API for text message delivery
+    \item Two-factor authentication support
+\end{itemize}
 
 
-    \item \textbf{Firebase Realtime Database / Firestore} – For storing user data, advertiser details, bookings, and campaign information.
+
+\subsection{Functional Requirements}
+
+\subsubsection{User Registration}
+
+\textbf{REQ-F-1.1:} The system shall allow users to register and log in as:
+\begin{itemize}[noitemsep]
+    \item Business Owners
+    \item Advertisers / Marketing Agencies
+    \item Billboard Owners
+    \item Vehicle Advertising Providers
+    \item Social Media Influencers
+    \item Platform Administrator
+\end{itemize}
+
+\subsubsection{User Profile Management}
+
+\textbf{REQ-F-2.1:} The system shall allow all users to:
+\begin{itemize}[noitemsep]
+    \item Create and update their profile information
+    \item Manage contact details and service information
+\end{itemize}
+
+\textbf{REQ-F-2.2:} Service providers shall be able to list:
+\begin{itemize}[noitemsep]
+    \item Advertising services
+    \item Pricing details
+    \item Availability
+\end{itemize}
+
+\subsubsection{Service Discovery and Search}
+
+\textbf{REQ-F-3.1:} The system shall allow business owners to:
+\begin{itemize}[noitemsep]
+    \item Browse available advertising services
+    \item Search services based on category, location, and price
+    \item View service provider details
+\end{itemize}
+
+\subsubsection{Booking and Reservation}
+
+\textbf{REQ-F-4.1:} The system shall allow business owners to:
+\begin{itemize}[noitemsep]
+    \item Book advertising services digitally
+    \item Reserve billboard spaces in different cities
+    \item Schedule campaign duration
+\end{itemize}
+
+\textbf{REQ-F-4.2:} The system shall record booking details for future reference.
+
+\subsubsection{Campaign Management}
+
+\textbf{REQ-F-5.1:} The system shall provide business owners with a dashboard to:
+\begin{itemize}[noitemsep]
+    \item View active, upcoming, and completed campaigns
+    \item Manage multiple advertising channels from one place
+\end{itemize}
+
+\subsubsection{Payment Processing}
+
+\textbf{REQ-F-6.1:} The system shall provide a secure payment processing feature that allows business owners to:
+\begin{itemize}[noitemsep]
+    \item Make payments for booked advertising services through the platform
+    \item View payment details and transaction summaries
+    \item Receive confirmation after successful payment
+\end{itemize}
+
+\textbf{REQ-F-6.2:} The system shall record payment information related to campaigns for reference and management purposes.
+
+\subsubsection{Administrator Management}
+
+\textbf{REQ-F-7.1:} The system shall allow the administrator to:
+\begin{itemize}[noitemsep]
+    \item Manage user accounts
+    \item Monitor platform activity
+    \item Ensure proper system functioning
+\end{itemize}
+
+\subsubsection{Ratings and Reviews}
+
+\textbf{REQ-F-8.1:} The system shall allow business owners to:
+\begin{itemize}[noitemsep]
+    \item Rate advertising service providers after campaign completion
+    \item Submit reviews based on their experience
+\end{itemize}
+
+\textbf{REQ-F-8.2:} The system shall:
+\begin{itemize}[noitemsep]
+    \item Display ratings and reviews on service provider profiles
+    \item Help other users make informed decisions when selecting advertising services
+\end{itemize}
+
+\subsubsection{Requirement Change Support}
+
+\textbf{REQ-F-9.1:} The system shall support updates and modifications to services and campaigns based on mutually agreed requirement changes, as defined in the agreement.
+
+\subsection{Non-Functional Requirements}
+
+\subsubsection{Performance}
+
+\textbf{REQ-NF-1.1:} The system shall respond to user 95percent  actions within one second.
+
+\textbf{REQ-NF-1.2:} The system shall handle minimum 1000 concurrent users without performance degradation.
+\textbf{REQ-NF-1.3:}  The system shall load the home screen within 3 seconds of application launch..
+
+\textbf{REQ-NF-2.1:} The system shall secure user authentication and data storage.
+
+\textbf{REQ-NF-2.2:}  The system shall enforce password complexity requirements: minimum 8 characters including at least one uppercase letter, one lowercase letter, one number, and one special character
+\textbf{REQ-NF-2.4:} The system shall implement role-based access control  to restrict features based on user roles.
+
+\subsubsection{Reliability}
+
+\textbf{REQ-NF-3.1:} The system shall perform consistently under normal operating conditions.
+
+\textbf{REQ-NF-3.2:} The system shall minimize system failures during campaign booking and management.
+\textbf{REQ-NF-3.3:} The system shall have a Mean Time To Recovery (MTTR) of less than 2 hours for critical failures.
+
+\textbf{REQ-NF-3.4:} Critical operations (payment processing, booking confirmation) shall have a success rate of at least 99.9%
+
+\subsubsection{Usability}
+
+\textbf{REQ-NF-4.1:} The system shall be operable after 30 minutes of training, achieve SUS Score >=70.
+
+\textbf{REQ-NF-4.2:} The system shall be accessible to non-technical users such as small business owners.
+
+\textbf{REQ-NF-4.3:} The system shall be designed with a clean and intuitive interface.
+
+\subsubsection{Availability}
+
+\textbf{REQ-NF-5.1:} The system should provide 99.5percent uptime, max 4 hours maintenance per month
+
+\textbf{REQ-NF-5.2:} The system shall be reliable for campaign booking and management activities.
+
+\subsubsection{Scalability}
+
+\textbf{REQ-NF-6.1:} The system shall be scalable to:
+\begin{itemize}[noitemsep]
+    \item Support increasing numbers of users
+    \item Add more advertising services and locations across Pakistan
+  \textbf{ REQ-NF-6.2:}  The system shall support geographic expansion to all major cities in Pakistan without requiring significant architectural changes.
+\end{itemize}
+
+\subsubsection{Compatibility}
+
+\textbf{REQ-NF-7.1:} The system shall support Android and iOS platforms.
+
+\textbf{REQ-NF-7.2:} The system shall work consistently across different mobile devices.
+\textbf{REQ-NF-7.3:} The system shall support screen resolutions from 720x1280 pixels to 1440x3040 pixels.
 
 
+\appendix
 
+\section{Context Diagram}
 
+The Context Diagram (Figure \ref{fig:context_diagram}) illustrates the ADLynk system boundary and its interactions with external entities. The diagram shows the system at the center with the following external entities:
 
+\begin{itemize}
+    \item \textbf{Business Owners:} Small businesses, startups, e-commerce companies seeking advertising services. They submit service requests, make bookings, process payments, and receive campaign reports.
+    \item \textbf{Service Providers:} Advertisers, billboard owners, vehicle advertisers, and social media influencers who list services, manage availability, receive bookings, and track revenue.
+    \item \textbf{System Administrators:} Platform managers and system supervisors who monitor system activity, manage users, resolve disputes, and generate system reports.
+    \item \textbf{Payment Gateway:} External payment processing services (JazzCash, EasyPaisa, Stripe) that process transactions and return payment confirmations.
+\end{itemize}
+
+\textbf{Data Flows:}
+
+\textbf{From Business Owners to System:}
+\begin{itemize}
+    \item Search queries and service requests
+    \item Booking requests and campaign data
+    \item Payment information
+    \item Confirmations and acknowledgments
+\end{itemize}
+
+\textbf{From System to Business Owners:}
+\begin{itemize}
+    \item Service listings and available options
+    \item Booking confirmations
+    \item Campaign analytics and reports
+    \item Payment information and receipts
+\end{itemize}
+
+\textbf{From Service Providers to System:}
+\begin{itemize}
+    \item Service registration and portfolio data
+    \item Availability updates and pricing information
+    \item Payment notifications
+\end{itemize}
+
+\textbf{From System to Service Providers:}
+\begin{itemize}
+    \item Booking details and client information
+    \item Campaign reports and performance metrics
+    \item Availability updates
+\end{itemize}
+
+\textbf{From Administrators to System:}
+\begin{itemize}
+    \item User management and system configuration
+    \item System reports requests
+\end{itemize}
+
+\textbf{From System to Administrators:}
+\begin{itemize}
+    \item System reports and activity logs
+\end{itemize}
+
+\textbf{System and Payment Gateway:}
+\begin{itemize}
+    \item Payment requests and transaction data (System to Gateway)
+    \item Payment confirmations and receipts (Gateway to System)
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{use.jpeg}
+\caption{ADLynk System Context Diagram}
+\label{fig:context_diagram}
+\end{figure}
+
+\newpage
+
+\section{Use Case Diagram}
+
+The Use Case Diagram (Figure \ref{fig:usecase_diagram}) depicts the main functional interactions between actors and the ADLynk system.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{usecases.jpeg}
+\caption{ADLynk System Use Case Diagram}
+\label{fig:usecase_diagram}
+\end{figure}
+
+\newpage
+
+\section{Glossary}
+
+Additional terms and definitions relevant to the ADLynk platform are provided in Section 1.3 of this document.
+
+\section{Change Log}
+
+\begin{itemize}
+    \item Version 1.0 (November 28, 2025): Initial SRS document created
+\end{itemize}
 
 
 \end{document}

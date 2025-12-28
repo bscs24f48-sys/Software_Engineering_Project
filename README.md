@@ -29,4 +29,35 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 ## Use case
 
 ![usecases](https://github.com/user-attachments/assets/3b9ddc8d-b9e4-4dd1-a85a-c34ad48b300f)
+## Actors and Use Cases
+
+### Business Owner
+•
+## Register/Login:< Create account and authenticate>
+•
+## Search Services: Find billboards, advertisers, and influencers
+•
+## View Service Details: Check pricing, availability, and portfolio
+•
+## Book Campaign: Reserve advertising services
+•
+## Make Payment: Pay for booked campaigns
+•
+## Manage Campaigns: Track and modify active campaigns
+•
+## View Analytics: Monitor campaign performance
+•
+##  Rate & Review: Provide feedback on services
+### Service Provider
+<description>
+<use case list>
+
+### Administrator
+<description>
+<use case list>
+
+### External Systems
+#### Payment Gateway
+<description>
+
 

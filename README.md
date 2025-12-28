@@ -67,7 +67,7 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
  ## Receive Notifications: 
 
 .Get booking alerts
-### Administrator
+# Administrator
 •
 ## Manage Users:
 • Add, edit, or remove users

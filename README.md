@@ -33,8 +33,8 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 
 ### Business Owner
 •
-## Register/Login:< Create account and authenticate>
-•
+## Register/Login: Create account and authenticate
+• Create account and authenticate
 ## Search Services: Find billboards, advertisers, and influencers
 •
 ## View Service Details: Check pricing, availability, and portfolio

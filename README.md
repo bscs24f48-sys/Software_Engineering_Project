@@ -28,7 +28,7 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 #### There is no one platform to manage all types of advertising.
 ## Use case
 
-![usecases]![WhatsApp Image 2025-12-28 at 4 10 40 PM](https://github.com/user-attachments/assets/6a6d0759-5381-4351-9d27-ff122d9301bd)
+![usecases](https://github.com/user-attachments/assets/6a6d0759-5381-4351-9d27-ff122d9301bd)
 
 ## Actors and Use Cases
 
@@ -86,7 +86,7 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 . Handle payment transactions securely (included in "Make Payment")
 ## Data FLow Diagram(0 Level)
 
-![dfd]![WhatsApp Image 2025-12-28 at 4 10 40 PM](https://github.com/user-attachments/assets/a94d0661-15b7-4e45-92ad-c4bf9a0db034)
+![dfd]!(https://github.com/user-attachments/assets/a94d0661-15b7-4e45-92ad-c4bf9a0db034)
 
 
 

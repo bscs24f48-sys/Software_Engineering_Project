@@ -31,7 +31,7 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 ![usecases](https://github.com/user-attachments/assets/3b9ddc8d-b9e4-4dd1-a85a-c34ad48b300f)
 ## Actors and Use Cases
 
-### Business Owner
+# Business Owner
 
 ## Register/Login: 
 • Create account and authenticate
@@ -49,16 +49,39 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 •Monitor campaign performance
 ##  Rate & Review:
 . Provide feedback on services
-### Service Provider
-<description>
-<use case list>
+# Service Provider
+•
+## Register/Login:
+• Create provider account
+## Create Service Profile:
+• List services and pricing
+ ## Update Availability: 
+•Manage booking calendar
+ ## Manage Bookings:
+• Accept/reject booking requests
+ ## Submit Campaign Reports:
+ 
+•. Provide campaign deliverables
+ ## View Earnings: 
+•Track revenue and payments
+ ## Receive Notifications: 
 
+.Get booking alerts
 ### Administrator
-<description>
-<use case list>
+•
+## Manage Users:
+• Add, edit, or remove users
+## Monitor Platform Activity: 
+•Track system usage
+## Generate Reports: 
+•Create analytics and insights
+## Manage Content & Services:
+• Approve/moderate listings
+## Handle Disputes: 
+.Resolve conflicts between users
 
-### External Systems
-#### Payment Gateway
-<description>
+# Payment Gateway
+## Process Payment:
+. Handle payment transactions securely (included in "Make Payment")
 
 

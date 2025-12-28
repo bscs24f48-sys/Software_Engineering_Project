@@ -84,4 +84,17 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 ## Process Payment:
 . Handle payment transactions securely (included in "Make Payment")
 
+# Data Flow Description
+The Adlynk platform centralizes data exchange between four key stakeholders:
+## Business Owners: 
+                  search for advertising services and submit booking requests with campaign details and payment information. They receive service listings, booking confirmations, and campaign analytics from the platform.
+## Service Providers :
+                     register their services with availability and pricing data. They receive booking details and client information, then submit campaign reports and performance metrics. Payment notifications are sent upon successful transactions.
+## Administrators:
+                 manage users and configure system settings while accessing comprehensive reports and analytics dashboards to monitor platform activity.
+## Payment Gateway:
+                   processes payment requests and transaction data from the platform, then returns payment confirmations and transaction status updates.
+The Adlynk platform acts as the central hub, coordinating all interactions, managing bookings, processing payments, and generating reports. This centralized architecture ensures data consistency, security, and efficient communication across the advertising ecosystem.
+
+
 

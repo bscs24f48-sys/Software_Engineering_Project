@@ -35,55 +35,53 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 # Business Owner
 
 ## Register/Login: 
-• Create account and authenticate
+
 ## Search Services: 
- •Find billboards, advertisers, and influencers
+ 
 ## View Service Details:
-• Check pricing, availability, and portfolio
+
 ## Book Campaign: 
-•Reserve advertising services
+
 ## Make Payment: 
-•Pay for booked campaigns
 ## Manage Campaigns: 
-•Track and modify active campaigns
+
 ## View Analytics: 
-•Monitor campaign performance
+
 ##  Rate & Review:
-. Provide feedback on services
+
 # Service Provider
 •
 ## Register/Login:
-• Create provider account
 ## Create Service Profile:
-• List services and pricing
+
  ## Update Availability: 
-•Manage booking calendar
+
  ## Manage Bookings:
-• Accept/reject booking requests
+
  ## Submit Campaign Reports:
  
-•. Provide campaign deliverables
+
  ## View Earnings: 
-•Track revenue and payments
+
  ## Receive Notifications: 
 
-.Get booking alerts
+
 # Administrator
 •
 ## Manage Users:
-• Add, edit, or remove users
+
 ## Monitor Platform Activity: 
-•Track system usage
+
 ## Generate Reports: 
-•Create analytics and insights
+
 ## Manage Content & Services:
-• Approve/moderate listings
+
 ## Handle Disputes: 
-.Resolve conflicts between users
+
 
 # Payment Gateway
 ## Process Payment:
-. Handle payment transactions securely (included in "Make Payment")
+
 ## Data FLow Diagram(0 Level)
 
 ![dfd](https://github.com/user-attachments/assets/b71b2750-3722-4597-8cbb-73f9d4a08cf5)
@@ -92,16 +90,14 @@ Adlynk is a software engineering project developed as part of CSC-225 (Software 
 
 
 # Data Flow Description
-The Adlynk platform centralizes data exchange between four key stakeholders:
+
 ## Business Owners: 
-                  search for advertising services and submit booking requests with campaign details and payment information. They receive service listings, booking confirmations, and campaign analytics from the platform.
 ## Service Providers :
-                     register their services with availability and pricing data. They receive booking details and client information, then submit campaign reports and performance metrics. Payment notifications are sent upon successful transactions.
+
 ## Administrators:
-                 manage users and configure system settings while accessing comprehensive reports and analytics dashboards to monitor platform activity.
+              
 ## Payment Gateway:
-                   processes payment requests and transaction data from the platform, then returns payment confirmations and transaction status updates.
-The Adlynk platform acts as the central hub, coordinating all interactions, managing bookings, processing payments, and generating reports. This centralized architecture ensures data consistency, security, and efficient communication across the advertising ecosystem.
+                  
 
 
 

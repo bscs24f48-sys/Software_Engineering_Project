@@ -10,6 +10,8 @@ A centralized digital platform that connects business owners with advertisers, b
 
 ## 🔗 Meeting-Minutes
 https://docs.google.com/spreadsheets/d/1czQSWoIMbhiGJrbsxJiYsBCTrp9PE0uaT6xD4J6GeGk/edit?usp=sharing
+## 🔗 Prototype Link
+https://www.figma.com/design/aLX5Ex3ffKKWs7lJOiSi0W/Untitled?node-id=0-1&t=WuTiU56FmNsoQlED-1
 
 
 ## About Project

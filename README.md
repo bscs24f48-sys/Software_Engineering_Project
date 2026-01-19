@@ -12,6 +12,8 @@ A centralized digital platform that connects business owners with advertisers, b
 https://docs.google.com/spreadsheets/d/1czQSWoIMbhiGJrbsxJiYsBCTrp9PE0uaT6xD4J6GeGk/edit?usp=sharing
 ## 🔗 Prototype Link
 https://www.figma.com/design/aLX5Ex3ffKKWs7lJOiSi0W/Untitled?node-id=0-1&t=WuTiU56FmNsoQlED-1
+## 🔗 Linkdin Link
+https://www.linkedin.com/posts/bilal-ahmed-khan-309151345_adtech-startuppakistan-digitaltransformation-activity-7418876643781308416-tC6L?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFZXOXkBYvbfVDYF6bEX6K3KQaAXHxor_NQ&utm_campaign=copy_link
 
 
 ## About Project
